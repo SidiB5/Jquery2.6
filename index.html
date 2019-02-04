@@ -19,20 +19,28 @@
 </div>
 <script>
   $(document).ready( ()=>{
-    $('#green').on('mouseenter', () => {
-      $('#text').css('color', 'green');
-    }).on('mouseleave', () => {
-      $('#text').css('color', 'black')
-    });
-    $('#red').on('mouseenter', () => {
-      $('#text').css('color', 'red');
-    }).on('mouseleave', () => {
-      $('#text').css('color', 'black')
-    });
-    $('#blue').on('mouseenter', () => {
-      $('#text').css('color', 'blue');
-    }).on('mouseleave', () => {
-      $('#text').css('color', 'black')
+    // $('#green').on('mouseenter', () => {
+    //   $('#text').css('color', 'green');
+    // }).on('mouseleave', () => {
+    //   $('#text').css('color', 'black')
+    // });
+    // $('#red').on('mouseenter', () => {
+    //   $('#text').css('color', 'red');
+    // }).on('mouseleave', () => {
+    //   $('#text').css('color', 'black')
+    // });
+    // $('#blue').on('mouseenter', () => {
+    //   $('#text').css('color', 'blue');
+    // }).on('mouseleave', () => {
+    //   $('#text').css('color', 'black')
+    // });
+    var couleur;
+    $('div.color').on('mouseenter', function(){
+      couleur = $(this).attr('id');
+      $('#text').css('color', couleur);
+      console.log(couleur)
+    }).on('mouseleave', () =>{
+      $('#text').css('color', 'black');
     });
   });
 </script>
